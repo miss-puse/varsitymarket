@@ -10,6 +10,7 @@ public class Product {
     private String productName;
     private Category category;
     private String description;
+    private String imageUrl;
     private String brand;
     private double price;
 
@@ -17,6 +18,7 @@ public class Product {
         this.productName = builder.productName;
         this.category = builder.category;
         this.description = builder.description;
+        this.imageUrl = builder.imageUrl;
         this.brand = builder.brand;
         this.price = builder.price;
     }
@@ -37,6 +39,10 @@ public class Product {
         return description;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
     public String getBrand() {
         return brand;
     }
@@ -49,6 +55,7 @@ public class Product {
         private String productName;
         private Category category;
         private String description;
+        private String imageUrl;
         private String brand;
         private double price;
 
@@ -67,6 +74,11 @@ public class Product {
             return this;
         }
 
+        public Builder setImageUrl(String imageUrl){
+            this.imageUrl = imageUrl;
+            return this;
+        }
+
         public Builder setBrand(String brand) {
             this.brand = brand;
             return this;
@@ -81,6 +93,7 @@ public class Product {
             this.productName = product.productName;
             this.category = product.category;
             this.description = product.description;
+            this.imageUrl = product.imageUrl;
             this.brand = product.brand;
             this.price = product.price;
             return this;
