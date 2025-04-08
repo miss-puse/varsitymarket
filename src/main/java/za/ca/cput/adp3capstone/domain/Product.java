@@ -7,6 +7,7 @@ Date:3 April 2025
 */
 public class Product {
     private long productId;
+    private Seller productSeller;
     private String productName;
     private Category category;
     private String description;
@@ -16,6 +17,7 @@ public class Product {
 
     private Product(Builder builder){
         this.productId = builder.productId;
+        this.productSeller = builder.productSeller;
         this.productName = builder.productName;
         this.category = builder.category;
         this.description = builder.description;
@@ -26,6 +28,10 @@ public class Product {
 
     public long getProductId() {
         return productId;
+    }
+
+    public Seller getProductSeller() {
+        return productSeller;
     }
 
     public String getProductName() {
@@ -54,6 +60,7 @@ public class Product {
 
     public static class Builder{
         private long productId;
+        private Seller productSeller;
         private String productName;
         private Category category;
         private String description;
@@ -65,6 +72,12 @@ public class Product {
             this.productId = productId;
             return this;
         }
+
+        public Builder setSeller(Seller seller) {
+            this.productSeller = seller;
+            return this;
+        }
+
         public Builder setProductName(String productName) {
             this.productName = productName;
             return this;
@@ -96,6 +109,8 @@ public class Product {
         }
 
         public Builder copy(Product product){
+            this.productId = product.productId;
+            this.productSeller = product.productSeller;
             this.productName = product.productName;
             this.category = product.category;
             this.description = product.description;
