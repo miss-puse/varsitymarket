@@ -6,6 +6,7 @@ Author: Ethan Le Roux (222622172)
 Date:3 April 2025
 */
 public class Product {
+    private long productId;
     private String productName;
     private Category category;
     private String description;
