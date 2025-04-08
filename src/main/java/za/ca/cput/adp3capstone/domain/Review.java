@@ -14,16 +14,15 @@ public class Review {
     private String reviewContent;
     private LocalDateTime reviewDate;
     private int reviewRating;
-    private long productId;
+    private Product product;
 
     private Review(Builder builder){
-        productId = builder.productId;
+        product = builder.product;
         reviewer = builder.reviewer;
         reviewTitle = builder.reviewTitle;
         reviewContent = builder.reviewContent;
         reviewDate = builder.reviewDate;
         reviewRating = builder.reviewRating;
-        productId = builder.productId;
     }
 
     public long getReviewId() {
@@ -50,8 +49,8 @@ public class Review {
         return reviewRating;
     }
 
-    public long getProductId() {
-        return productId;
+    public Product getProduct() {
+        return product;
     }
 
     public static class Builder{
@@ -61,7 +60,7 @@ public class Review {
         private String reviewContent;
         private LocalDateTime reviewDate;
         private int reviewRating;
-        private long productId;
+        private Product product;
 
         public Builder setReviewId(long reviewId) {
             this.reviewId = reviewId;
@@ -93,8 +92,8 @@ public class Review {
             return this;
         }
 
-        public Builder setProductId(long productId) {
-            this.productId = productId;
+        public Builder setProduct(Product product) {
+            this.product = product;
             return this;
         }
 
@@ -105,7 +104,7 @@ public class Review {
             this.reviewContent = review.reviewContent;
             this.reviewDate = review.reviewDate;
             this.reviewRating = review.reviewRating;
-            this.productId = review.productId;
+            this.product = review.product;
             return this;
         }
 
