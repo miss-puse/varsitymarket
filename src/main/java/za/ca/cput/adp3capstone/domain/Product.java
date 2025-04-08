@@ -15,6 +15,7 @@ public class Product {
     private double price;
 
     private Product(Builder builder){
+        this.productId = builder.productId;
         this.productName = builder.productName;
         this.category = builder.category;
         this.description = builder.description;
@@ -52,6 +53,7 @@ public class Product {
     }
 
     public static class Builder{
+        private long productId;
         private String productName;
         private Category category;
         private String description;
@@ -59,6 +61,10 @@ public class Product {
         private String brand;
         private double price;
 
+        public Builder setProductId(long productId) {
+            this.productId = productId;
+            return this;
+        }
         public Builder setProductName(String productName) {
             this.productName = productName;
             return this;
