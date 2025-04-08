@@ -21,6 +21,10 @@ public class Product {
         this.price = builder.price;
     }
 
+    public long getProductId() {
+        return productId;
+    }
+
     public String getProductName() {
         return productName;
     }
