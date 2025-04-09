@@ -10,5 +10,5 @@ Author: Ethan Le Roux (222622172)
 Date:3 April 2025
 */
 public interface IProductRepository extends IRepository<Product, Long>{
-    HashMap<Product, Long> getAll();
+    HashMap<Long, Product> getAll();
 }
