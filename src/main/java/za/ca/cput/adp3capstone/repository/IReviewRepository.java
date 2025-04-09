@@ -10,5 +10,5 @@ Author: Ethan Le Roux (222622172)
 Date:3 April 2025
 */
 public interface IReviewRepository extends IRepository<Review, Long> {
-    HashMap<Review,Long>  getAll();
+    HashMap<Long,Review>  getAll();
 }
