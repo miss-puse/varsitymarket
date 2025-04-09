@@ -34,4 +34,11 @@ public class Helper {
             return true;
         return false;
     }
+
+    public static boolean isObjectNull(Object object){
+        if (object == null){
+            return true;
+        }
+        return false;
+    }
 }
