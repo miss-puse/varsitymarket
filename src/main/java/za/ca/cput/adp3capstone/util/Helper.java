@@ -17,9 +17,28 @@ public class Helper {
         return false;
     }
 
+    public static boolean isIntNegative(int y){
+        if(y < 0)
+            return true;
+        return false;
+    }
+
+    public static boolean isIntZero(int y){
+        if(y == 0)
+            return true;
+        return false;
+    }
+
     public static boolean isDoubleNull(double z){
         if(z == 0.0)
             return true;
+        return false;
+    }
+
+    public static boolean isObjectNull(Object object){
+        if (object == null){
+            return true;
+        }
         return false;
     }
 }
