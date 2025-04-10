@@ -1,6 +1,7 @@
 package za.ca.cput.adp3capstone.repository;
 
 import za.ca.cput.adp3capstone.domain.Product;
+import za.ca.cput.adp3capstone.domain.Review;
 
 import java.util.HashMap;
 
@@ -34,10 +35,11 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public Product read(Long id) {
-        if(!products.containsKey(id)) {
+        Product product = products.get(id);
+        if(product == null){
             return null;
         }
-        return products.get(id);
+        return product;
     }
 
     @Override
