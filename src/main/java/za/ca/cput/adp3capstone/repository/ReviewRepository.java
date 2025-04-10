@@ -31,22 +31,39 @@ public class ReviewRepository implements IReviewRepository {
     }
 
     @Override
-    public Review read(Long aLong) {
-        return null;
+    public Review read(Long id) {
+        Review review = reviews.get(id);
+        if(review == null){
+            return null;
+        }
+        return review;
     }
 
     @Override
     public Review create(Review review) {
-        return null;
+        if(review == null){
+            return null;
+        }
+        reviews.put(review.getReviewId(), review);
+        return review;
     }
 
     @Override
     public Review update(Review review) {
-        return null;
+        Review foundReview = reviews.get(review.getReviewId());
+        if(foundReview==null){
+            return null;
+        }
+        reviews.put(review.getReviewId(), review);
+        return foundReview;
     }
 
     @Override
     public boolean delete(Review review) {
-        return false;
+        if(review==null){
+            return false;
+        }
+        reviews.remove(review.getReviewId());
+        return true;
     }
 }
