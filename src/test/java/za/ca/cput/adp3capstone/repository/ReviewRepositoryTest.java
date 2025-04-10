@@ -21,7 +21,7 @@ class ReviewRepositoryTest {
     private static IReviewRepository reviewRepository = ReviewRepository.getRepository();
     User user = new User();
     private Product product = ProductFactory.createProduct(99999,"2 Year Old 2GB 50GB Thinkpad", Category.TECHNOLOGY,"Its an old celeron laptop.","https://varsitymarket.co.za/products/99999","Celeron",5999.99);
-    private Review review = ReviewFactory.createReview(9890001,user,"This pc works!","I like it. good value for money", LocalDateTime.now(),5,product);
+    private Review review = ReviewFactory.createReview(98901L,user,"This pc works!","I like it. good value for money", LocalDateTime.now(),5,product);
 
     @Test
     @Order(1)
@@ -34,7 +34,7 @@ class ReviewRepositoryTest {
     @Test
     @Order(2)
     void read() {
-        Review review = reviewRepository.read(9890001L);
+        Review review = reviewRepository.read(98901L);
         assertNotNull(review);
         System.out.println(review);
     }
