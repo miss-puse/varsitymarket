@@ -50,7 +50,12 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public Product update(Product product) {
-        return null;
+        Product foundProduct = products.get(product.getProductId());
+        if(foundProduct==null){
+            return null;
+        }
+        products.put(product.getProductId(), product);
+        return foundProduct;
     }
 
     @Override
