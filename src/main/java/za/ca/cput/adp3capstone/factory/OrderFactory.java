@@ -1,4 +1,9 @@
 package za.ca.cput.adp3capstone.factory;
+/* Order.java
+Order Factory Class
+Author: Brezano Liebenberg (230463886)
+Date: 5 April 2025
+ */
 
 import za.ca.cput.adp3capstone.domain.Order;
 import za.ca.cput.adp3capstone.util.Helper;
