@@ -1,4 +1,4 @@
-package za.ca.cput.adp3capstone.domain;
+package za.ca.cput.adp3capstone.domain.products;
 
 public class Cable {
     private int cableId;
