@@ -1,5 +1,11 @@
 package za.ca.cput.adp3capstone.domain.products;
 
+/* Product.java
+Cable model class
+Author: Hope Kgomokaboya (222152672
+Date:3 April 2025
+*/
+
 public class Cable {
     private int cableId;
     private String cableType;
