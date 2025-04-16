@@ -1,6 +1,5 @@
 package za.ca.cput.adp3capstone.repository;
 
-import za.ca.cput.adp3capstone.domain.Product;
 import za.ca.cput.adp3capstone.domain.Review;
 
 import java.util.HashMap;
