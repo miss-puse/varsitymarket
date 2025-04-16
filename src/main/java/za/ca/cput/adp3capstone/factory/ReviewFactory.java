@@ -1,8 +1,8 @@
 package za.ca.cput.adp3capstone.factory;
 
-import za.ca.cput.adp3capstone.domain.Product;
 import za.ca.cput.adp3capstone.domain.Review;
 import za.ca.cput.adp3capstone.domain.User;
+import za.ca.cput.adp3capstone.domain.products.Product;
 
 import java.time.LocalDateTime;
 
