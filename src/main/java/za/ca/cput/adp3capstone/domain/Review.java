@@ -1,5 +1,7 @@
 package za.ca.cput.adp3capstone.domain;
 
+import za.ca.cput.adp3capstone.domain.products.Product;
+
 import java.time.LocalDateTime;
 
 /* Review.java
